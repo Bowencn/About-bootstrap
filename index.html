@@ -7,9 +7,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
 </head>
-<body>
+<body data-spy="scroll" data-target="#navbar-example" style="position: relative">
     <div class="container">
-        <div class="row">
+        <div id="navbar-example">
+            <ul class="nav nav-tabs">
+                <li><a href="#home" class="btn ">1</a></li>
+                <li><a href="#down" class="btn btn-info">2</a></li>
+                <li><a href="#progress" class="btn btn-info">3</a></li>
+            </ul>
+        </div>
+        <div class="row" id="home">
             <div class="col-md-4 col-xs-12">
                 <h1>1 <small>one</small></h1>
             </div>
@@ -32,12 +39,30 @@
                     <p>varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
                     <footer>chrise</footer>
                 </blockquote>
+                <p>@fat
+                        Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.
+                        
+                        @mdo
+                        Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua cupidatat mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla carles. Tattooed cosby sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                        
+                        one
+                        Occaecat commodo aliqua delectus. Fap craft beer deserunt skateboard ea. Lomo bicycle rights adipisicing banh mi, velit ea sunt next level locavore single-origin coffee in magna veniam. High life id vinyl, echo park consequat quis aliquip banh mi pitchfork. Vero VHS est adipisicing. Consectetur nisi DIY minim messenger bag. Cred ex in, sustainable delectus consectetur fanny pack iphone.
+                        
+                        two
+                        In incididunt echo park, officia deserunt mcsweeney's proident master cleanse thundercats sapiente veniam. Excepteur VHS elit, proident shoreditch +1 biodiesel laborum craft beer. Single-origin coffee wayfarers irure four loko, cupidatat terry richardson master cleanse. Assumenda you probably haven't heard of them art party fanny pack, tattooed nulla cardigan tempor ad. Proident wolf nesciunt sartorial keffiyeh eu banh mi sustainable. Elit wolf voluptate, lo-fi ea portland before they sold out four loko. Locavore enim nostrud mlkshk brooklyn nesciunt.
+                        
+                        three
+                        Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.
+                        
+                        Keytar twee blog, culpa messenger bag marfa whatever delectus food truck. Sapiente synth id assumenda. Locavore sed helvetica cliche irony, thundercats you probably haven't heard of them consequat hoodie gluten-free lo-fi fap aliquip. Labore elit placeat before they sold out, terry richardson proident brunch nesciunt quis cosby sweater pariatur keffiyeh ut helvetica artisan. Cardigan craft beer seitan readymade velit. VHS chambray laboris tempor veniam. Anim mollit minim commodo ullamco thundercats.
+                        
+                        用法</p>
                 too swich <kbd>enter + i</kbd>
                 <a href="#" class="btn btn-default">link</a>
             </div>
         </div>
         <span class="glyphicon glyphicon-search"></span>
-        <div class="dropdown">
+        <div class="dropdown" id="down">
             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" 
             data-toggle="dropdown">
                 dropdown
@@ -51,7 +76,7 @@
             </ul>
         </div>
         <!-- 进度条 -->
-        <div class="progress">
+        <div class="progress" id="progress">
             <div class="progress-bar progress-bar-success progress-bar-striped active" style="width: 60%"></div>
             <div class="progress-bar progress-bar-info progress-bar-striped active" style="width: 20%"></div>
         </div>
@@ -63,9 +88,37 @@
                 <p>Cum natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
             </div>
         </div>
+        <!-- 模态框 -->
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">demo click me</button>
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog" aria-hidden="true">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Modal title</h4>
+                    </div>
+                    <div class="modal-body">123</div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-lg btn-danger" data-placement="right" data-toggle="popover" data-trigger="focus" title="123" data-content="123456">click me!</a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
     <script src="./bootstrap-3.3.7-dist/js/bootstrap.js"></script>
-    <script src="./index.js"></script>
+    <script>
+        $('#myModal').on('shown.bs.modal',function(){
+            $('#myModal').focus()
+        })
+        $('body').scrollspy({target: '#navbar-example'})
+        $(function(){
+            $('[data-toggle="popover"]').popover()
+        })
+    </script>
 </body>
 </html>
